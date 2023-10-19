@@ -1,0 +1,51 @@
+:root{
+    --DarkModeColor: #fff;
+    --FontProject: font-family: 'Inter', sans-serif;
+}
+
+*{
+    font-family: var(--FontProject);
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    background: url(/assets/Img/bg-mobile.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#container{
+    padding-top: 56px;
+    width: 360px;
+    margin: auto;
+}
+
+#profile{
+    text-align: center;
+    padding: 24px;
+    gap: 8px;
+    border: 1px solid green;
+}
+
+#profile img{
+    width: 112px;
+}
+
+#profile p{
+    margin-top: 8px;
+    line-height: 24px;
+    font-weight: 500;
+    color: var(--DarkModeColor);
+}
+
+#links{
+    border: 1px solid red;
+    height: 320px;
+}
+
+#liks button{
+    
+}
