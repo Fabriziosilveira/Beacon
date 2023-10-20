@@ -1,6 +1,10 @@
 :root{
-    --DarkModeColor: #fff;
+    --TextDarkModeColor: #fff;
+    --BorderColorButtomDarkMode: rgba(255, 255, 255, 0.50);
+    --BackgroundColorButtomDarkMode: rgba(255, 255, 255, 0.1);
+    --BackgroundColorButtomDarkModeHover: rgba(255, 255, 255, 0.10);
     --FontProject: font-family: 'Inter', sans-serif;
+
 }
 
 *{
@@ -18,16 +22,16 @@ body{
 }
 
 #container{
-    padding-top: 56px;
+    padding-top: 60px;
     width: 360px;
     margin: auto;
+    padding: 24px;
 }
 
 #profile{
     text-align: center;
     padding: 24px;
     gap: 8px;
-    border: 1px solid green;
 }
 
 #profile img{
@@ -38,14 +42,77 @@ body{
     margin-top: 8px;
     line-height: 24px;
     font-weight: 500;
-    color: var(--DarkModeColor);
+    color: var(--TextDarkModeColor);
 }
 
 #links{
-    border: 1px solid red;
-    height: 320px;
+    height: auto;
+    padding: 24px 24px 24px 24px ;
+    
 }
 
-#liks button{
+#links ul{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
     
+}
+
+#links ul a li{
+    list-style: none;
+    text-align: center;
+
+    border: 1px solid var(--BorderColorButtomDarkMode);
+    border-radius: 8px;
+    background: var(--BackgroundColorButtomDarkMode);
+    padding: 16px 24px 16px 24px; 
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+}
+
+#links ul a{
+    text-decoration: none;
+    font-weight: 500;
+    color: var(--TextDarkModeColor);
+    transition: background 0.2s;
+}
+
+#links ul a:hover{
+    border: 1.5px solid var(--TextDarkModeColor);
+    border-radius: 8px;
+    background: var(--BackgroundColorButtomDarkModeHover);
+}
+
+#social-links{
+    display: flex;
+    justify-content: center;
+    gap: 1px;
+}
+
+#social-links a{
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    padding: 11px;
+}
+
+#social-links a:hover{
+    text-decoration: none;
+    background: rgba(255, 255, 255, 0.20);
+    border-radius: 50%;
+
+    transition: background 0.7s;
+}
+
+footer p{
+    color: var(--TextDarkModeColor);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    text-align: center;
+}
+
+footer p a{
+    text-decoration: none;
+    color: #ffffff44;
 }
