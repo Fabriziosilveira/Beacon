@@ -176,7 +176,15 @@ footer{
     color: gray;
 }
 
+.light footer{
+    color: black;
+}
+
 footer a{
     text-decoration: none;
     color: var(--TextColor);
+}
+
+.light footer a{
+    color: gray;
 }
