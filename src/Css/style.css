@@ -1,10 +1,27 @@
 :root{
-    --TextDarkModeColor: #fff;
+    --TextColor: #fff;
     --BorderColorButtomDarkMode: rgba(255, 255, 255, 0.50);
     --BackgroundColorButtomDarkMode: rgba(255, 255, 255, 0.1);
+    --Background:url(/assets/Img/bg-mobile.jpg);
+    --BackgroundButtomIcon: url(/assets/svg/moom-stars.svg);
     --BackgroundColorButtomDarkModeHover: rgba(255, 255, 255, 0.10);
     --FontProject: font-family: 'Inter', sans-serif;
+    --BackgroundSocialLinks: rgba(255, 255, 255, 0.20);
+    --BackgroundColorSwitch: rgba(255, 255, 255, 0.1);
+    --BorderColorSwitch: rgba(255, 255, 255, 0.5);
+    --BackgroundColorSwitch: rgba(255, 255, 255, 0.1);
+}
 
+/* Ligth Mode */
+.light {
+    --Background:url(/assets/Img/bg-mobile-light.jpg);
+    --TextColor: black;
+    --BackgroundButtomIcon: url(/assets/svg/sun.svg);
+    --BackgroundColorButtomDarkMode: rgba(0, 0, 0, 0.05);
+    --BorderColorButtomDarkMode: rgba(0, 0, 0, 0.5);
+    --BackgroundColorSwitch: rgba(0, 0, 0, 0.1);
+    --BorderColorSwitch: rgba(0, 0, 0, 0.5);
+    --BackgroundSocialLinks: rgba(0, 0, 0, 0.09);
 }
 
 *{
@@ -16,7 +33,7 @@
 
 
 body{
-    background: url(/assets/Img/bg-mobile.jpg);
+    background: var(--Background);
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -42,7 +59,43 @@ body{
     margin-top: 8px;
     line-height: 24px;
     font-weight: 500;
-    color: var(--TextDarkModeColor);
+    color: var(--TextColor);
+}
+
+#switch{
+    position: relative;
+    width: 64px;
+    margin: 4px auto;
+    
+}
+
+#switch button{
+    width: 32px;
+    height: 32px;
+    background: white var(--BackgroundButtomIcon) no-repeat center;
+    border: 0;
+    border-radius: 50%;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    z-index: 1;
+    transform: translateY(-50%);
+}
+
+.light #switch button{
+    right: 0;
+    left: initial;
+}
+
+#switch span{
+    display:block;
+    width: 64px;
+    height: 24px;
+    background: var(--BackgroundColorSwitch);
+    border: 1px solid var(--BorderColorSwitch);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 9999px;
 }
 
 #links{
@@ -73,12 +126,12 @@ body{
 #links ul a{
     text-decoration: none;
     font-weight: 500;
-    color: var(--TextDarkModeColor);
+    color: var(--TextColor);
     transition: background 0.2s;
 }
 
 #links ul a:hover{
-    border: 1.5px solid var(--TextDarkModeColor);
+    border: 1.5px solid var(--TextColor);
     border-radius: 8px;
     background: var(--BackgroundColorButtomDarkModeHover);
 }
@@ -98,21 +151,31 @@ body{
 
 #social-links a:hover{
     text-decoration: none;
-    background: rgba(255, 255, 255, 0.20);
+    background: var(--BackgroundSocialLinks);
     border-radius: 50%;
 
     transition: background 0.7s;
 }
 
+ion-icon{
+    font-size: 24px;
+    color: var(--TextColor);
+}
+
 footer p{
-    color: var(--TextDarkModeColor);
+    color: var(--TextColor);
     font-style: normal;
     font-weight: 400;
     font-size: 13px;
     text-align: center;
 }
 
-footer p a{
+footer{
+    padding: 24px 0;
+    text-align: center;
+}
+
+footer a{
     text-decoration: none;
-    color: #ffffff44;
+    color: var(--TextColor);
 }

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br" class="light">
     <head>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,6 +16,11 @@
                 <img src="/assets/Img/avatar.png" alt="">
                 <p>Fabrizio Silveira</p>
             </div>
+            <div id="switch" onclick="toggleMode()">
+                <button>
+                </button>
+                <span></span>
+            </div>
             <div id="links">
                <ul>
                 <a href="/assets/pdf/CURRÍCULO OUTUBRO 2023.pdf" target="_blank"><li>Currículo</li></a> 
@@ -26,16 +31,22 @@
             </div>
             <div id="social-links">
                 <a href="https://github.com/Fabriziosilveira" target="_blank">
-                    <img src="/assets/svg/GitHub.svg" alt="">
+                    <ion-icon name="logo-github"></ion-icon>
                 </a>
 
                 <a href="www.linkedin.com/in/fabrizio-cagnoni-silveira-323505270" target="_blank">
-                    <img src="/assets/svg/LinkedIn.svg" alt="">
+                    <ion-icon name="logo-linkedin"></ion-icon>
                 </a>
             </div>
         </div>
+
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+        <script src="/src/JavaScript/script.js"></script>
     </body>
     <footer>
-        <p>Developed by <a href="https://github.com/Fabriziosilveira">@Fabriziosilveira</a></p>
+        Developed by <a href="https://github.com/Fabriziosilveira">@Fabriziosilveira</a>
     </footer>
 </html>
